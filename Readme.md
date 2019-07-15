@@ -1,15 +1,26 @@
+### Dependencies
+
+Add this to your package.json file and run npm install or yarn.
+
+    "dependencies":
+    {
+        ...
+        "native-base": "^2.12.1",
+        "react": "16.8.6",
+        "react-native": "0.60.3",
+        "react-native-table-component": "^1.2.0",
+    }
+
 ### Follow the steps to use this Table Components:
 
 ## Preview
 
-Page 1            |  Page 2
-:-------------------------:|:-------------------------:
-![IMG 1](images/img1.png?raw=true "Image 1")  |  ![IMG 2](images/img2.png?raw=true "Image 1")
-
-
-
+|                    Page 1                    |                    Page 2                    |
+| :------------------------------------------: | :------------------------------------------: |
+| ![IMG 1](images/img1.png?raw=true 'Image 1') | ![IMG 2](images/img2.png?raw=true 'Image 1') |
 
 ## Step 1:
+
 Define Your States:
 
     // Define your states like this
@@ -24,19 +35,23 @@ Define Your States:
     ]);
 
 ## Step 2:
+
 Pass The States
 
     // Then pass the states like this
     <Table
-        tableHead={tableHead} 
-        tableData={tableData} 
-        widthArr={widthArr} 
+        tableHead={tableHead}
+        tableData={tableData}
+        widthArr={widthArr}
         ContentMaker={LeavesCellContentMaker}
     >
-Notice that I have passed a component in ContentMaker prop named *LeavesCellContentMaker*, The JSX of this component is in the end of the document for your help.
 
+Notice that I have passed a component in ContentMaker prop named
+_LeavesCellContentMaker_, The JSX of this component is in the end of the
+document for your help.
 
 ## Help: LeavesCellContentMaker
+
 Make your component which will Render the cell content, I have mine like this
 
     // JSX of LeavesCellContentMaker
@@ -107,4 +122,3 @@ Make your component which will Render the cell content, I have mine like this
     }
 
     export default CellContentMaker;
-
